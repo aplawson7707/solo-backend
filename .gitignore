@@ -6,6 +6,7 @@ __pycache__
 db.sqlite3
 media
 soloBackendCore/settings.py
+*/migrations
 /migrations
 migrations/*.py
 
