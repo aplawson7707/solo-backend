@@ -18,12 +18,14 @@ from django.urls import path, include
 from rest_framework import routers
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 from tasks import views as tasks_views
+from fridayAPI.urls import router as friday_api_router
 
 router = routers.DefaultRouter()
 router.register(r'tasks', tasks_views.TaskViewSet)
 
 urlpatterns = [
     path('api/', include(router.urls)),
+    path('api/fridayAPI/', include(friday_api_router.urls)),
     path('admin/', admin.site.urls),
     path('api/token/', TokenObtainPairView.as_view(), name='token'),
     path('api/refresh_token/', TokenRefreshView.as_view(), name='refresh_token'),
