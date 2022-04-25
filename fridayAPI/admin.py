@@ -1,6 +1,9 @@
 from django.contrib import admin
-from fridayAPI.models import Test
+from fridayAPI.models import (
+    ShoppingListItems,
+    Test,
+)
 
-# Register your models here.
 
 admin.site.register(Test)
+admin.site.register(ShoppingListItems)
