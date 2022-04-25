@@ -19,7 +19,7 @@ class TestViewSet(viewsets.ModelViewSet):
 
 
 class ShoppingListItemViewSet(viewsets.ModelViewSet):
-    queryset = ShoppingListItems.objects.filter(active=True)
+    queryset = ShoppingListItems.objects.all()
     serializer_class = ShoppingListItemSerializer
     filterset_fields = [
         'id',
